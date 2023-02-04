@@ -9,9 +9,9 @@ class Guest:
     def can_afford(self, item):
         return self.wallet >= item.price
     
-    def buy_drink(self, drink):
-        if self.age >=18 and self.can_afford(drink):
-            self.tab += drink.price
+    def buy_item(self, item):
+        if self.can_afford(item):
+            self.tab += item.price
     
     def pay_tab(self):
         self.wallet -= self.tab
